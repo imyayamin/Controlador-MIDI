@@ -14,25 +14,39 @@ h1 {
     font-size: 80px;
 }
 
-p {
-    color: #7e43f1;
-    font-size: 50px;
+.notas {
+    padding: 0px 20px; 
+    font-size: 38px; 
+    text-align: left;
+    cursor: pointer;
     position: absolute;
-    left: 200px;
-    top: 200px;
+    background-color: #000000;
+    color: white;
+    border: solid;
+    border-radius: 5px;
+    border-width: 10px;
+    margin: 10px 0; 
+    bottom: 70px;   
+    left: 50px;  
+
+    display: block;           /* Faz com que os <p> fiquem em um bloco, um abaixo do outro */
+    overflow-y: auto;         /* Permite que o conteúdo ultrapasse a altura da caixa sem aumentar o tamanho da div */
+    max-height: 100%;         /* Define um limite de altura para a div */
 }
 
-/* Estilo para o botão de mudar cor de fundo */
-#changeColorBtn {
-    position: absolute;
-    top: 150px;   /* Distância do topo */
-    left: 50%;   /* Coloca no meio da tela */
-    transform: translateX(-50%); /* Ajusta para centralizar */
+.notas p {
+    margin: 1px; /* Remove margens dos <p> para evitar espaçamento extra */
+    line-height: 1.1; /* Ajusta o espaçamento entre as linhas para ficarem mais próximos */
+    position: relative;
+}
+.nota-texto {
+    display: inline-block;  
+    margin-right: 450px;      
 }
 
 /* Estilo comum para todos os botões */
 button {
-    padding: 20px 40px; /* Tamanho do botão */
+    padding: 30px 50px; /* Tamanho do botão */
     font-size: 18px; /* Tamanho da fonte */
     cursor: pointer;
     background-color: #7e43f1;
@@ -52,9 +66,21 @@ button:hover {
 .instrument-buttons {
     position: absolute; /* Posicionamento absoluto para o contêiner */
     right: 100px; /* 100px à direita da tela */
-    bottom: 300px; /* 200px da parte inferior da tela */
+    bottom: 280px; /* 200px da parte inferior da tela */
     display: flex; /* Usar Flexbox para o alinhamento */
     flex-direction: column; /* Organizar os botões em uma coluna */
     justify-content: center; /* Centralizar verticalmente os botões */
     align-items: center; /* Centralizar horizontalmente os botões */
+}
+
+#output{
+    margin-top: 20px;
+    color: white; 
+    background-color: #333; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 20px;
+    position: absolute;
+    right: 100px;
+    bottom: 200px;
 }
